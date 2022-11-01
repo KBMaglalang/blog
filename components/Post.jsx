@@ -4,10 +4,10 @@ import moment from "moment/moment";
 
 const Post = ({ post }) => {
   return (
-    <Link href={"#"}>
+    <Link href={`/post/${post.node.slug}`}>
       <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
         <div className="text-center mb-4 font-semibold text-2xl pt-4">
-          <span>{post.node.title}</span>
+          <h1>{post.node.title}</h1>
         </div>
         <div className="relative">
           <img
@@ -19,7 +19,7 @@ const Post = ({ post }) => {
         <div className="py-4 text-slate-400">
           <span>{moment(post.node.createdAt).format("MMM DD, YYYY")}</span>
         </div>
-        <div className="mt-4">{post.node.excerpt}</div>
+        <div>{post.node.excerpt}</div>
       </div>
     </Link>
   );
