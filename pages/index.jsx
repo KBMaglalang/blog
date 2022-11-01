@@ -6,18 +6,6 @@ import { getPosts } from "../lib/queries";
 // components
 import { Post } from "../components";
 
-// ! test data
-// const data = [
-//   {
-//     title: "post-1",
-//     excerpt: "short description of post-1",
-//   },
-//   {
-//     title: "post-2",
-//     excerpt: "short description of post-2",
-//   },
-// ];
-
 export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
@@ -46,6 +34,5 @@ export const getServerSideProps = async () => {
 
   return {
     props: { posts },
-    // revalidate: 10,
   };
 };
