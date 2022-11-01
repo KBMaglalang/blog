@@ -12,7 +12,9 @@ const Footer = () => {
           </Link>
           . All Rights Reserved.
         </span>
-        <div className="md:float-right text-blue-400 mt-2">placeholder</div>
+        <div className="md:float-right text-blue-400 mt-2">
+          <Link href={"#"}>placeholder</Link>
+        </div>
       </div>
     </footer>
   );

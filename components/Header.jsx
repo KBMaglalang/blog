@@ -10,7 +10,9 @@ const Header = () => {
             <span className="font-bold text-3xl text-slate-600">Blog</span>
           </Link>
         </div>
-        <div className="md:float-right text-blue-400 mt-2">placeholder</div>
+        <div className="md:float-right text-blue-400 mt-2">
+          <Link href={"#"}>placeholder</Link>
+        </div>
       </div>
     </div>
   );
