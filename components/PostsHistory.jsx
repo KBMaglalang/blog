@@ -21,7 +21,7 @@ const PostsHistory = () => {
       </div>
       {recentPosts.map((post) => (
         <Link key={post.title} href={`/post/${post.slug}`}>
-          <div className="my-4">
+          <div className="my-4 text-ellipsis overflow-hidden whitespace-nowrap">
             <span className="mr-2  text-slate-600">
               {moment(post.createdAt).format("MMM DD, YYYY")}
             </span>
