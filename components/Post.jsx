@@ -9,7 +9,7 @@ const Post = ({ post }) => {
         <div className="text-center mb-4 font-semibold text-2xl pt-4">
           <h1>{post.node.title}</h1>
         </div>
-        <div className="relative">
+        <div>
           <img
             src={post.node.featuredImage.url}
             alt={post.node.title}
