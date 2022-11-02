@@ -2,6 +2,9 @@ import React from "react";
 import moment from "moment/moment";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
+// components
+import { Comments, CommentsForm } from "../../components";
+
 // queries
 import { getPosts, getPostData } from "../../lib/queries";
 
@@ -24,6 +27,8 @@ const Page = ({ post }) => {
           <RichText content={post.content.raw} />
         </div>
       </div>
+      <CommentsForm slug={post.slug} />
+      <Comments slug={post.slug} />
     </div>
   );
 };
