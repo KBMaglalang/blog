@@ -46,7 +46,7 @@ const CommentsForm = ({ slug }) => {
   };
 
   return (
-    <div className="bg-gray-200 shadow-lg rounded-lg p-8 pb-12 mb-8">
+    <div className="bg-gray-200 shadow-lg rounded-lg p-4 mb-8">
       <h3 className="text-xl font-semibold border-b pb-2">
         Leave A Reply - All Comments Will Be Under Review
       </h3>
@@ -69,6 +69,7 @@ const CommentsForm = ({ slug }) => {
           required
         />
       </div>
+
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea
           ref={commentEl}
@@ -79,11 +80,11 @@ const CommentsForm = ({ slug }) => {
         />
       </div>
 
-      <div className="mt-4">
+      <div className="w-full inline-block">
         <button
           type="button"
           onClick={handleSubmit}
-          className="float-right transition duration-500 ease hover:bg-slate-900 bg-slate-500  rounded-xl text-white px-4 py-2 "
+          className="float-right transition duration-500 ease hover:bg-slate-900 bg-slate-500 rounded-xl text-white px-4 py-2 "
         >
           Post Comment
         </button>
