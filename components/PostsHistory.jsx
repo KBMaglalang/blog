@@ -15,7 +15,7 @@ const PostsHistory = () => {
   }, []);
 
   return (
-    <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
+    <div className="rounded-lg bg-gray-200 shadow-lg p-4 mb-8">
       <div className="border-b w-full inline-block py-4 border-gray-400 text-center font-semibold">
         Recent Posts
       </div>
