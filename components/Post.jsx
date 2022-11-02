@@ -5,7 +5,7 @@ import moment from "moment/moment";
 const Post = ({ post }) => {
   return (
     <Link href={`/post/${post.node.slug}`}>
-      <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
+      <div className="rounded-lg bg-gray-200 shadow-lg p-4 mb-8">
         <div className="text-center mb-4 font-semibold text-2xl pt-4">
           <h1>{post.node.title}</h1>
         </div>

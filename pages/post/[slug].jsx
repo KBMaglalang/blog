@@ -11,14 +11,14 @@ import { getPosts, getPostData } from "../../lib/queries";
 const Page = ({ post }) => {
   return (
     <div className="container mx-auto px-10 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-2 col-span-1">
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
+        <div className="lg:col-span-4 col-span-1">
           <div className="top-8 lg:sticky">
             <PostsHistory />
           </div>
         </div>
         <div className="lg:col-span-8 col-span-1">
-          <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
+          <div className="rounded-lg bg-gray-200 shadow-lg p-4 mb-8">
             <div>
               <img
                 src={post.featuredImage.url}

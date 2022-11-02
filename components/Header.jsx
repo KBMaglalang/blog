@@ -16,10 +16,12 @@ const Header = () => {
       <div className="border-b w-full inline-block py-4 border-gray-400">
         <div className="md:float-left block">
           <Link href={"/"}>
-            <span className="font-bold text-3xl text-slate-600">Blog</span>
+            <span className="font-bold text-3xl text-slate-600">
+              NovelAI Notes
+            </span>
           </Link>
         </div>
-        <div className="md:float-right text-blue-400 mt-2">
+        <div className="md:float-right text-gray-400 mt-2">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
               <span className="ml-4">{category.name}</span>
