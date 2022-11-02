@@ -2,6 +2,9 @@ import React from "react";
 import moment from "moment/moment";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
+// components
+import { Comments, CommentsForm } from "../../components";
+
 // queries
 import { getPosts, getPostData } from "../../lib/queries";
 
@@ -24,6 +27,8 @@ const Page = ({ post }) => {
           <RichText content={post.content.raw} />
         </div>
       </div>
+      <CommentsForm slug={post.slug} />
+      <Comments slug={post.slug} />
     </div>
   );
 };
@@ -32,10 +37,7 @@ export default Page;
 
 export const getStaticPaths = async () => {
   const posts = await getPosts();
-  console.log(
-    "🚀 ~ file: [slug].jsx ~ line 35 ~ getStaticPaths ~ posts",
-    posts
-  );
+
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
