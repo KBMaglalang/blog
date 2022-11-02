@@ -18,7 +18,7 @@ const Page = ({ post }) => {
           </div>
         </div>
         <div className="lg:col-span-8 col-span-1">
-          <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
+          <div className="rounded-lg bg-gray-200 shadow-lg p-4 mb-8">
             <div>
               <img
                 src={post.featuredImage.url}
