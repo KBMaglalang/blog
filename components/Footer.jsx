@@ -13,15 +13,14 @@ const Footer = () => {
           . All Rights Reserved.
         </span>
         <div className="md:float-right text-blue-400 ">
-          <Link href={"#"}>placeholder</Link>
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <a href="https://www.freepik.com/free-vector/white-background-with-triangle-patterns_4403214.htm#query=abstract%20background&position=37&from_view=keyword">
+              Background Image by starline
+            </a>{" "}
+            on Freepik
+          </span>
         </div>
       </div>
-      <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-        <a href="https://www.freepik.com/free-vector/white-background-with-triangle-patterns_4403214.htm#query=abstract%20background&position=37&from_view=keyword">
-          Background Image by starline
-        </a>{" "}
-        on Freepik
-      </span>
     </footer>
   );
 };
