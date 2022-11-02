@@ -3,7 +3,7 @@ import moment from "moment/moment";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 
 // components
-import { Comments, CommentsForm } from "../../components";
+import { Comments, CommentsForm, PostsHistory } from "../../components";
 
 // queries
 import { getPosts, getPostData } from "../../lib/queries";
@@ -11,24 +11,33 @@ import { getPosts, getPostData } from "../../lib/queries";
 const Page = ({ post }) => {
   return (
     <div className="container mx-auto px-10 mb-8">
-      <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
-        <div>
-          <img
-            src={post.featuredImage.url}
-            alt={post.title}
-            className="h-full w-full shadow-lg rounded-lg"
-          />
-        </div>
-        <div className="px-4 lg:px-0">
-          <div className="py-4 text-slate-400">
-            <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="lg:col-span-2 col-span-1">
+          <div className="top-8 lg:sticky">
+            <PostsHistory />
           </div>
-          <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
-          <RichText content={post.content.raw} />
+        </div>
+        <div className="lg:col-span-8 col-span-1">
+          <div className="rounded-lg bg-gray-200 shadow-lg lg:p-4 mb-8">
+            <div>
+              <img
+                src={post.featuredImage.url}
+                alt={post.title}
+                className="h-full w-full shadow-lg rounded-lg"
+              />
+            </div>
+            <div className="px-4 lg:px-0">
+              <div className="py-4 text-slate-400">
+                <span>{moment(post.createdAt).format("MMM DD, YYYY")}</span>
+              </div>
+              <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
+              <RichText content={post.content.raw} />
+            </div>
+          </div>
+          <CommentsForm slug={post.slug} />
+          <Comments slug={post.slug} />
         </div>
       </div>
-      <CommentsForm slug={post.slug} />
-      <Comments slug={post.slug} />
     </div>
   );
 };
