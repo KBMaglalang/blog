@@ -1,6 +1,12 @@
 import Head from "next/head";
 
-export default function Home() {
+// queries
+import { getPosts } from "../lib/queries";
+
+// components
+import { Post } from "../components";
+
+export default function Home({ posts }) {
   return (
     <div className="container mx-auto px-10 mb-8">
       <Head>
@@ -12,9 +18,21 @@ export default function Home() {
           <div className="lg:col-span-2 col-span-1">
             <div className="relative top-8 lg:sticky">side bar</div>
           </div>
-          <div className="lg:col-span-8 col-span-1">content</div>
+          <div className="lg:col-span-8 col-span-1">
+            {posts.map((post, i) => (
+              <Post post={post} key={i} />
+            ))}
+          </div>
         </div>
       </main>
     </div>
   );
 }
+
+export const getServerSideProps = async () => {
+  const posts = await getPosts();
+
+  return {
+    props: { posts },
+  };
+};

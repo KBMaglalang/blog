@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@graphcms/rich-text-react-renderer": "^0.6.1",
     "aws-amplify": "^4.3.42",
     "graphql": "^16.6.0",
     "graphql-request": "^5.0.0",
