@@ -37,10 +37,7 @@ export default Page;
 
 export const getStaticPaths = async () => {
   const posts = await getPosts();
-  console.log(
-    "🚀 ~ file: [slug].jsx ~ line 35 ~ getStaticPaths ~ posts",
-    posts
-  );
+
   return {
     paths: posts.map(({ node: { slug } }) => ({ params: { slug } })),
     fallback: true,
