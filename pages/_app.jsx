@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
       <ToastContainer />
       <Head>
         <title>Blog</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.svg" />
       </Head>
       <Layout>
         <Component {...pageProps} />
