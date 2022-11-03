@@ -4,3 +4,4 @@ export { default as Post } from "./Post";
 export { default as PostsHistory } from "./PostsHistory";
 export { default as Comments } from "./Comments";
 export { default as CommentsForm } from "./CommentsForm";
+export { default as Loading } from "./Loading";
