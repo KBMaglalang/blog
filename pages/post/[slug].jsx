@@ -1,14 +1,26 @@
 import React from "react";
 import moment from "moment/moment";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import { useRouter } from "next/router";
 
 // components
-import { Comments, CommentsForm, PostsHistory } from "../../components";
+import {
+  Comments,
+  CommentsForm,
+  PostsHistory,
+  Loading,
+} from "../../components";
 
 // queries
 import { getPosts, getPostData } from "../../lib/queries";
 
 const Page = ({ post }) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loading />;
+  }
+
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 lg:gap-12">
@@ -54,7 +66,7 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const data = await getPostData(params.slug);
+  const data = (await getPostData(params.slug)) || [];
 
   return {
     props: { post: data },
