@@ -7,8 +7,8 @@ const Footer = () => {
       <div className="border-t w-full inline-block py-4 border-gray-400">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
-          <Link href={"/"} className="hover:underline">
-            NovelAi Notes™
+          <Link href={"/"} className="hover:underline" legacyBehavior>
+            <a>NovelAi Notes™</a>
           </Link>
           . All Rights Reserved.
         </span>
