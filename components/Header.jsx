@@ -18,7 +18,7 @@ const Header = () => {
           <Link href={"/"} legacyBehavior>
             <a>
               <span className="font-bold text-3xl text-slate-600">
-                NovelAI Notes
+                Electronics Notes
               </span>
             </a>
           </Link>

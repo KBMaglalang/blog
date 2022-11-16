@@ -8,7 +8,7 @@ const Footer = () => {
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
           © 2022{" "}
           <Link href={"/"} className="hover:underline" legacyBehavior>
-            <a>NovelAi Notes™</a>
+            <a>Electronics Notes™</a>
           </Link>
           . All Rights Reserved.
         </span>

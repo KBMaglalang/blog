@@ -1,6 +1,6 @@
-# NovelAI Note Blog
+# Electronics Blog
 
-A blog discussing about NovelAI and StableDiffusion. Using NextJS react framework, GraphCMS/Hygraph for CMS, GraphQL for querying the CMS, and Tailwind CSS for CSS framework. Viewers can comment on posts and blog owner can vet comments that will be shown on the post.
+A blog discussing about electronics design. Using NextJS react framework, GraphCMS/Hygraph for CMS, GraphQL for querying the CMS, and Tailwind CSS for CSS framework. Viewers can comment on posts and blog owner can vet comments that will be shown on the post.
 
 # Dependencies
 

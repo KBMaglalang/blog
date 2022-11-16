@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ToastContainer />
       <Head>
-        <title>Blog - NovelAI Notes</title>
+        <title>Blog - Electronics Notes</title>
         <link rel="icon" href="/icon.svg" />
       </Head>
       <Layout>
