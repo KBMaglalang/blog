@@ -17,12 +17,12 @@ A blog discussing about electronics design. Using NextJS react framework, GraphC
 
 # Screenshots
 
-!['homepage'](doc/1-homepage.png)
-!['post'](doc/2-post.png)
-!['categories'](doc/3-categories.png)
-!['comments-form'](doc/4-commentsForm.png)
-!['comments'](doc/5-comments.png)
-!['responsive'](doc/6-responsiveDesign.png)
+!['homepage'](doc/1-homepage.PNG)
+!['post'](doc/2-post.PNG)
+!['categories'](doc/3-categories.PNG)
+!['comments-form'](doc/4-commentsForm.PNG)
+!['comments'](doc/5-comments.PNG)
+!['responsive'](doc/6-responsiveDesign.PNG)
 
 # Getting Started
 
